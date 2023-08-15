@@ -13,13 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.get('/', (req, res) => {
-        let attlog  = req.body.data
-        attlog.cloud_id = req.body.cloud_id
-        let sql = "INSERT INTO log SET ?";
-        let query = conn.query(sql, attlog, (err, results) => {
-          if(err) throw err;
-          res.send('Yo!')
-        });
-        console.log(attlog)
+res.send('Yo!')
+console.log(req.body)
    });
 app.listen(process.env.PORT || 3000)
