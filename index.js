@@ -10,6 +10,6 @@ app.get('/', (req, res) => {
     
     console.log(attlog);
     
-    res.send(JSON.stringify({"status": 200, "response": "Data received successfully."}));
+    res.send(JSON.stringify({"status": done, "response": "successfully."}));
 });
 app.listen(process.env.PORT || 3000)
