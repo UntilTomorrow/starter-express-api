@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     attlog.type = req.body.type;
     console.log(attlog);
 
-    const chatId = '986530860';
+    const chatId = '281794994';
     const message = JSON.stringify(attlog);
     bot.sendMessage(chatId, message)
     .then(() => {
