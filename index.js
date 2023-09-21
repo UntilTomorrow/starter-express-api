@@ -7,6 +7,7 @@ app.use(express.urlencoded({extended:true}));
 app.get('/', (req, res) => {
     let attlog = req.body.data;
     attlog.cloud_id = req.body.cloud_id;
+    attlog.scan = req.body.type;
     
     console.log(attlog);
     
