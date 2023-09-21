@@ -9,18 +9,21 @@ app.get('/', (req, res) => {
     const attlogData = req.query.data;
     const cloudId = req.query.cloud_id;
 
+    // Parse data JSON dari parameter querystring
+    const data = JSON.parse(attlogData);
+
     // Pisahkan tanggal dan waktu dari data 'scan'
-    const scanDateTime = attlogData.scan.split(' ');
+    const scanDateTime = data.scan.split(' ');
     const scanDate = scanDateTime[0];
     const scanTime = scanDateTime[1];
 
     // Membuat objek baru dengan data yang telah dipisahkan
     const attlog = {
-        pin: attlogData.pin,
+        pin: data.pin,
         date: scanDate,
         time: scanTime,
-        verify: attlogData.verify,
-        status_scan: attlogData.status_scan,
+        verify: data.verify,
+        status_scan: data.status_scan,
         cloud_id: cloudId,
     };
 
