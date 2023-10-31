@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     attlog.cloud_id = req.body.cloud_id;
     attlog.type = req.body.type;
     console.log(attlog);
-    const chatId = '-1001973353115';
+    const chatId = '-1001988389379';
     const message = JSON.stringify(attlog);
     bot.sendMessage(chatId, message)
     .then(() => {
