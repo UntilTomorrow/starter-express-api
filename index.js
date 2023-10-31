@@ -12,7 +12,6 @@ app.get('/', (req, res) => {
     attlog.cloud_id = req.body.cloud_id;
     attlog.type = req.body.type;
     console.log(attlog);
-
     const chatId = '372896912';
     const message = JSON.stringify(attlog);
     bot.sendMessage(chatId, message)
