@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const TelegramBot = require('node-telegram-bot-api');
 
-const botToken = '6398537713:AAGc5PMhhbEmsenmrXm0qN_qVzKw_ttBr4I'; // Bot token
+const botToken = '6934780383:AAHbVEAaaXw1aemL7zXur2xtDzNRWjuNfZ8'; // Bot token
 const bot = new TelegramBot(botToken, { polling: true });
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     attlog.type = req.body.type;
     console.log(attlog);
 
-    const chatId = '-1001926482759';
+    const chatId = '281794994';
     const message = JSON.stringify(attlog);
     bot.sendMessage(chatId, message)
     .then(() => {
