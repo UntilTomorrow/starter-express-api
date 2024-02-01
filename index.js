@@ -5,10 +5,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.get('/', (req, res) => {
-    let getdata = req.body.data;
-    getdata.cloud_id = req.body.cloud_id;
-    getdata.type = req.body.type;
-    getdata.trans_id = req.body.trans_id;
+    let getdata = req.body.visitor;
     console.log(getdata);
     res.send(JSON.stringify({"status": 200, "response": "successfully."}));
 });
